@@ -1,0 +1,3 @@
+Awalnya program ini masih memakai kondisi arr[i] >= 0. Artinya, semua angka yang nilainya nol ke atas ikut dihitung dalam perkalian. Masalahnya, di dalam array ada angka 0, dan begitu angka 0 ikut dikali, hasil akhirnya pasti jadi 0 berapa pun angka lainnya. Makanya waktu kode masih pakai >= 0, hasil akhirnya selalu 0, karena perhitungannya jadi: 2 × 0 × 26 × 28 = 0.
+
+Setelah kode diperbaiki, kondisinya diganti menjadi arr[i] > 0. Dengan kondisi ini, angka 0 tidak ikut dihitung, jadi yang dikalikan hanya angka yang benar-benar positif. Nah, angka positif di array tersebut adalah 2, 26, dan 28 saja. Jadi perhitungannya berubah menjadi: 2 × 26 × 28, dan hasilnya 1456.
