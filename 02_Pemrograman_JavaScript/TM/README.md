@@ -17,4 +17,4 @@ Kelipatan 14 harus diperiksa terlebih dahulu, karena 14 merupakan kelipatan 2 da
 
 Selain itu, program juga melakukan validasi input. Jika input yang diberikan bukan array, maka program akan menampilkan pesan "Input tidak valid". Program kemudian diuji menggunakan test.js
 
-![output program](./assets/output_terminal.png)
+![output program](./Assets/output_terminal.png)
