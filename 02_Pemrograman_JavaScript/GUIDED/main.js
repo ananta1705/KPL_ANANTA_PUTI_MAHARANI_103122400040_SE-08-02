@@ -15,10 +15,10 @@
 
 // console.log('Hello, World!'); // fungsi petik 1 adalah untuk menampilkan teks di konsol
 
-// let nama = 'Nanta';
-// console.log(`hello, nama saya ${nama}`); // variabel untuk menyimpan nama
+let nama = 'Nanta';
+console.log(`hello, nama saya ${nama}`); // variabel untuk menyimpan nama
 
-//obejek
+// obejek
 // const uer = {
 //     name: 'Nanta',
 //     age: 20,
