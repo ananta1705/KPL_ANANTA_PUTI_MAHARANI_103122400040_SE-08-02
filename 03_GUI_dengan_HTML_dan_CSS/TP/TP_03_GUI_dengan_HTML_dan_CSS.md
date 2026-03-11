@@ -9,6 +9,10 @@ Repository ini berisi implementasi program HTML dan CSS untuk menyelesaikan tuga
 **NIM** : 103122400040  
 **Kelas** : SE-08-02  
 
+**Asisten Praktikum** :  
+- Adhiansyah Muhammad Pradana Farawowan  
+- Hamid Khaeruman  
+
 ---
 
 ## 📖 Soal
