@@ -1,4 +1,4 @@
-# 📌Tugas Mandiri 03 – GUI dengan HTML dan CSS
+# 📌Guided 03 – GUI dengan HTML dan CSS
 
 ---
 ## 👩‍💻 Identitas Mahasiswa
