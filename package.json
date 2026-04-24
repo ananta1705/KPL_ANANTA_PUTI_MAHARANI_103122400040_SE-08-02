@@ -1,5 +1,25 @@
 {
   "dependencies": {
+    "axios": "^1.15.2",
     "dotenv": "^17.4.2"
-  }
+  },
+  "name": "kpl_ananta_puti_maharani_103122400040_se-08-02",
+  "version": "1.0.0",
+  "description": "Repositori ini digunakan untuk kebutuhan Praktikum Konstruksi Perangkat Lunak (KPL) kelas SE-08-02.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ananta1705/KPL_ANANTA_PUTI_MAHARANI_103122400040_SE-08-02.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ananta1705/KPL_ANANTA_PUTI_MAHARANI_103122400040_SE-08-02/issues"
+  },
+  "homepage": "https://github.com/ananta1705/KPL_ANANTA_PUTI_MAHARANI_103122400040_SE-08-02#readme"
 }
