@@ -1,16 +1,24 @@
 {
-  "dependencies": {
-    "axios": "^1.15.2",
-    "dotenv": "^17.4.2",
-    "swagger-jsdoc": "^6.2.8",
-    "swagger-ui-express": "^5.0.1"
-  },
   "name": "kpl_ananta_puti_maharani_103122400040_se-08-02",
   "version": "1.0.0",
   "description": "Repositori ini digunakan untuk kebutuhan Praktikum Konstruksi Perangkat Lunak (KPL) kelas SE-08-02.",
-  "main": "index.js",
+  "main": "app.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"No test yet\""
+  },
+  "dependencies": {
+    "axios": "^1.15.2",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jest": "^30.3.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
   },
   "repository": {
     "type": "git",
