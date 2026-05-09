@@ -14,6 +14,7 @@
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "jest": "^30.3.0",
+    "mtk-gampang": "file:10_Library_Construction/TM/mtk_gampang",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"
   },
