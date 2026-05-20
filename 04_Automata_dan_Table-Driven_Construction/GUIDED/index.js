@@ -78,3 +78,6 @@ btnModeGelap.addEventListener("click", () => {
 btnModeTerang.addEventListener("click", () => {
   document.body.classList.remove("dark-mode");
 });
+
+debugger;
+console.log("Debugging mode aktif!");
