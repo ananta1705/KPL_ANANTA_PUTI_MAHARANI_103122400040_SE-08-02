@@ -1,0 +1,477 @@
+Baik, saya akan membuat HTML wireframe yang mirip dengan style dari 2 gambar yang Anda berikan. Saya akan analisis terlebih dahulu karakteristik visual dari kedua gambar tersebut.
+
+Berdasarkan gambar yang Anda share, saya lihat:
+- **Background gelap/abu-abu** (dark theme)
+- **Kartu/box dengan shadow** untuk setiap halaman
+- **Layout grid** untuk menampilkan multiple screens
+- **Typography modern**
+- **Color scheme biru/hijau** untuk accent
+
+Saya akan membuat HTML yang mencerminkan style tersebut. Berikut kode lengkapnya:
+
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe - Sistem Manajemen Sampah</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #4a4a4a;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        h2 {
+            color: #fff;
+            margin: 30px 0 20px 0;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .wireframe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .wireframe-card {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .wireframe-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
+            padding: 20px;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-label {
+            font-size: 13px;
+            color: #333;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .form-input {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 13px;
+            background: #f8f9fa;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #0ea5e9;
+            background: #fff;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: auto;
+            padding-top: 15px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #0ea5e9;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0284c7;
+        }
+
+        .btn-secondary {
+            background: #e5e7eb;
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background: #d1d5db;
+        }
+
+        .btn-danger {
+            background: #ef4444;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #dc2626;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        .simple-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
+
+        .simple-table thead {
+            background: #f3f4f6;
+        }
+
+        .simple-table th {
+            padding: 10px;
+            text-align: left;
+            font-weight: 600;
+            color: #333;
+            border-bottom: 2px solid #0ea5e9;
+        }
+
+        .simple-table td {
+            padding: 10px;
+            border-bottom: 1px solid #e5e7eb;
+            color: #555;
+        }
+
+        .simple-table tbody tr:hover {
+            background: #f9fafb;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-box {
+            background: #f0f9ff;
+            border: 2px solid #0ea5e9;
+            border-radius: 6px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0ea5e9;
+        }
+
+        .chart-placeholder {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 2px dashed #0ea5e9;
+            border-radius: 6px;
+            padding: 40px 20px;
+            text-align: center;
+            color: #666;
+            margin: 20px 0;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .menu-section {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .menu-header {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            padding: 15px 20px;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .menu-items {
+            padding: 0;
+            list-style: none;
+        }
+
+        .menu-items li {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e5e7eb;
+            color: #333;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .menu-items li:hover {
+            background: #f0fdf4;
+            padding-left: 25px;
+        }
+
+        .menu-items li:last-child {
+            border-bottom: none;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .badge-success {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .badge-warning {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .badge-info {
+            background: #cffafe;
+            color: #164e63;
+        }
+
+        .section-title {
+            color: #fff;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 600;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #0ea5e9;
+        }
+
+        @media (max-width: 768px) {
+            .wireframe-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 WIREFRAME - SISTEM MANAJEMEN SAMPAH</h1>
+
+        <!-- SECTION 1: PETUGAS INPUT DATA -->
+        <div class="section-title">MODUL PETUGAS</div>
+        <div class="wireframe-grid">
+            <div class="wireframe-card">
+                <div class="card-header">INPUT DATA SAMPAH</div>
+                <div class="card-content">
+                    <div class="form-group">
+                        <label class="form-label">Hari Tanggal</label>
+                        <input type="date" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">No Kendaraan</label>
+                        <input type="text" class="form-input" placeholder="B1234CD">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Nama Supir</label>
+                        <input type="text" class="form-input" placeholder="Ahmad Wijaya">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Nama Muatan</label>
+                        <input type="text" class="form-input" placeholder="Sampah Organik">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">UPKP</label>
+                        <input type="text" class="form-input" placeholder="A-01">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Berat Muatan (kg)</label>
+                        <input type="number" class="form-input" placeholder="450">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Netto (kg)</label>
+                        <input type="number" class="form-input" placeholder="440">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">No SKRD</label>
+                        <input type="text" class="form-input" placeholder="SKRD-2026-0001">
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-primary">SIMPAN</button>
+                        <button class="btn btn-secondary">RESET</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 2: ADMIN DASHBOARD -->
+        <div class="section-title">MODUL ADMIN - DASHBOARD</div>
+        <div class="wireframe-grid">
+            <div class="wireframe-card">
+                <div class="card-header">DASHBOARD ADMIN</div>
+                <div class="card-content">
+                    <div class="stat-grid">
+                        <div class="stat-box">
+                            <div class="stat-label">Total Input Hari Ini</div>
+                            <div class="stat-value">250</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-label">Total Transaksi Bulan Ini</div>
+                            <div class="stat-value">1.250</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-label">Jenis Terbanyak</div>
+                            <div class="stat-value" style="font-size: 14px; color: #0ea5e9;">Sampah Murni</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-label">Kendaraan Aktif</div>
+                            <div class="stat-value">45</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 3: MENU ADMIN -->
+        <div class="section-title">MENU ADMIN</div>
+        <div class="wireframe-grid">
+            <div class="menu-section">
+                <div class="menu-header">📋 NAVIGASI ADMIN</div>
+                <ul class="menu-items">
+                    <li>▸ Dashboard</li>
+                    <li>▸ Input Data Sampah</li>
+                    <li>▸ Laporan Sampah</li>
+                    <li>▸ Laporan Transaksi</li>
+                    <li>▸ Trend Laporan</li>
+                    <li>▸ Manajemen User</li>
+                    <li>▸ Pengaturan Sistem</li>
+                    <li>▸ Logout</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SECTION 4: LAPORAN SAMPAH -->
+        <div class="section-title">LAPORAN SAMPAH</div>
+        <div class="wireframe-grid">
+            <div class="wireframe-card" style="grid-column: 1 / -1;">
+                <div class="card-header">LAPORAN SAMPAH</div>
+                <div class="card-content">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 20px;">
+                        <div>
+                            <label class="form-label">Dari Tanggal</label>
+                            <input type="date" class="form-input">
+                        </div>
+                        <div>
+                            <label class="form-label">Sampai Tanggal</label>
+                            <input type="date" class="form-input">
+                        </div>
+                        <div>
+                            <label class="form-label">Jenis Sampah</label>
+                            <select class="form-input">
+                                <option>Semua Jenis</option>
+                                <option>Sampah Murni</option>
+                                <option>Sampah Liar</option>
+                                <option>Bahan RDF</option>
+                                <option>Residu</option>
+                                <option>Bursam</option>
+                                <option>Midle Tossa</option>
+                                <option>RDF to SBI</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table class="simple-table">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Tanggal</th>
+                                    <th>Jenis Sampah</th>
+                                    <th>Berat (kg)</th>
+                                    <th>UPKP</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>20/05/2026</td>
+                                    <td>Sampah Murni</td>
+                                    <td>450</td>
+                                    <td>A-01</td>
+                                    <td><span class="badge badge-success">✓ Valid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>20/05/2026</td>
+                                    <td>Sampah Liar</td>
+                                    <td>320</td>
+                                    <td>A-02</td>
+                                    <td><span class="badge badge-success">✓ Valid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>20/05/2026</td>
+                                    <td>Bahan RDF
